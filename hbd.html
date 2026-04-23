@@ -1,5 +1,91 @@
 <!DOCTYPE html>
 <html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sayang ❤️</title>
+<style>
+    body {
+        margin: 0; padding: 0; text-align: center; font-family: 'Poppins', sans-serif;
+        background: #ffe6e6; color: #333; overflow: hidden;
+    }
+    #content {
+        display: none; padding: 20px; margin-top: 10vh;
+    }
+    .main-box {
+        background: white; padding: 30px; border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        display: inline-block; max-width: 90%; width: 400px;
+    }
+    h1 { font-size: 24px; color: #ff4d4d; }
+    p { font-size: 16px; line-height: 1.6; }
+    .btn {
+        background: #ff4d4d; color: white; border: none; padding: 10px 20px;
+        border-radius: 20px; cursor: pointer; font-size: 16px; margin-top: 20px;
+        transition: 0.3s;
+    }
+    .btn:hover { background: #ff1a1a; transform: scale(1.05); }
+    #bunga { font-size: 50px; }
+    /* Animasi */
+    @keyframes heartBeat {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    .heart { animation: heartBeat 1s infinite; display: inline-block; }
+</style>
+</head>
+<body>
+
+<div id="content" style="display:block;">
+    <div class="main-box">
+        <div id="bunga">💌</div>
+        <div id="text"></div>
+        <button class="btn" id="nextBtn" onclick="nextStep()">Klik Aku Sayang</button>
+    </div>
+</div>
+
+<script>
+    var step = 0;
+    var text = document.getElementById("text");
+    var btn = document.getElementById("nextBtn");
+    var bunga = document.getElementById("bunga");
+
+    var messages = [
+        "Hai Kamu... ✨",
+        "Coba liat tanggal hari ini deh... 🤔",
+        "Wah, ada yang ulang tahun ya hari ini! 🎉",
+        "Selamat Ulang Tahun Sayangku! ❤️",
+        "Semoga kamu sehat selalu, makin disayang Allah, dan semua impianmu tercapai, Amin... 🤲",
+        "Makasih ya udah lahir di dunia ini dan jadi pacar aku yang paling baik. 🥰",
+        "Aku cuma mau bilang, aku sayang banget sama kamu. <br>I love you so much! ❤️❤️❤️",
+        "Sekali lagi, Happy Level Up Day! 🎂🥳"
+    ];
+
+    function nextStep() {
+        step++;
+        if (step < messages.length) {
+            text.innerHTML = "<h1>" + messages[step] + "</h1>";
+            if (step === 3) bunga.innerHTML = "🎂";
+            if (step === 7) btn.style.display = "none";
+        } else {
+            text.innerHTML = "<h1>Love You! ❤️</h1>";
+        }
+    }
+    
+    // Inisialisasi teks pertama
+    text.innerHTML = "<h1>" + messages[0] + "</h1>";
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body style="text-align:center; font-size: 2rem; margin-top: 20%;">
+    <p>🎂🎉🎈 Happy Birthday! 🎈🎉🎂</p>
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
 <meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
